@@ -1,6 +1,5 @@
 import { BsCart3, BsMoonFill, BsSunFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { FaBarsStaggered } from "react-icons/fa6";
 
 function Navbar() {
   return (

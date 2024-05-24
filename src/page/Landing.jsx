@@ -16,7 +16,7 @@ function Landing() {
     fetch("https://strapi-store-server.onrender.com/api/products?featured=true")
       .then((response) => response.json())
       .then((data) => {
-        setLists(data.data); // Assuming the API returns an object with a 'data' property that is an array.
+        setLists(data.data);
       })
       .catch((error) => {
         console.error(error);
@@ -65,15 +65,15 @@ function Landing() {
         {Array.isArray(lists) && lists.length > 0 ? (
           lists.map((list) => (
             <Link
-              to={`/product/${list.id}`} // Corrected variable name to list.id
+              to={`/product/${list.id}`}
               className="card w-full shadow-xl hover:shadow-2xl transition duration-300"
-              key={list.id} // Added key prop to Link component
+              key={list.id}
             >
               <figure className="px-10 pt-10">
                 <img
                   className="rounded-xl h-64 md:h-48 w-full object-cover"
                   src={list.attributes.image}
-                  alt={list.attributes.title} // Added alt attribute
+                  alt={list.attributes.title}
                 />
               </figure>
               <div className="card-body items-center text-center">
